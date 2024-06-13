@@ -1,53 +1,87 @@
-# Next.js & NextUI Template
+## Features
+### Accessibility
+- [ ] Add SEO(site map, robots.txt, meta tag, naver, google, ...etc)
+- [ ] Add i18n
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+### Design
+- [ ] Add Storybook
+  - [ ] Add Common Component
+  - [ ] Add Common Layout
+- [ ] Add MDX
+- [x] NextUI
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+### Testing
+- [x] Jest
+- [x] Playwright
+- [ ] Test Flow
+- [ ] Coverage
 
-## Technologies Used
+### Collaboration
+- [ ] Setup Github Action
+- [ ] Add Common Module
+- [ ] ADD SWR
+- [x] Eslint
+  - [ ] Documentation
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+## Reference
+- https://github.com/vercel/platforms/blob/main/app/sitemap.ts
 
-## How to Use
+### blog
+- https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/main/contentlayer.config.ts
+- https://tailwind-nextjs-starter-blog.vercel.app/blog/new-features-in-v1#analytics
 
-### Use the template with create-next-app
+### about
+- https://www.enricodeiana.design/about
+- https://www.alexnaraghi.com/contact
+- https://www.lauren-waller.com/about
+- https://blog.cmiscm.com/?page_id=3023
 
-To create a new project based on this template using `create-next-app`, run the following command:
 
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
+### Projects
+- https://www.enricodeiana.design/works
+- https://www.alexnaraghi.com/armajet
+- https://devonstank.com/my-work/elementary-coffee-co
+- https://www.codewonders.dev/projects
+
+### Dashboard
+- https://dribbble.com/shots/22004279-Business-Landing-page-design
+- https://itssharl.ee/fr
+
+
+### Search Engine
+- /Users/choeseongpil/Code/OpenSource/React/nextjs-openai-doc-
+### Linting
+- https://github.com/vercel/hyper/blob/2a7bb18259d975f27b30b502af1be7576f6f5656/tsconfig.eslint.json
+
+
+## Testing
+Inside that directory, you can run several commands:
 ```
+  pnpm exec playwright test
+    Runs the end-to-end tests.
 
-### Install dependencies
+  pnpm exec playwright test --ui
+    Starts the interactive UI mode.
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+  pnpm exec playwright test --project=chromium
+    Runs the tests only on Desktop Chrome.
 
-```bash
-npm install
+  pnpm exec playwright test example
+    Runs the tests in a specific file.
+
+  pnpm exec playwright test --debug
+    Runs the tests in debug mode.
+
+  pnpm exec playwright codegen
+    Auto generate tests with Codegen.
 ```
-
-### Run the development server
-
-```bash
-npm run dev
+We suggest that you begin by typing:
 ```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
+    pnpm exec playwright test
 ```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+### Reference
+- https://playwright.dev/docs/intro
+- https://nextjs.org/docs/app/building-your-application/testing/playwright
+- https://jestjs.io/docs/tutorial-react
+- https://testing-library.com/docs/react-testing-library/intro
+- https://nextjs.org/docs/app/building-your-application/testing/jest
