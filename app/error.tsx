@@ -11,6 +11,7 @@ export default function Error({
 }) {
   useEffect(() => {
     // Log the error to an error reporting service
+    // eslint-disable-next-line eslint-comments/disable-enable-pair
     /* eslint-disable no-console */
     console.error(error);
   }, [error]);
