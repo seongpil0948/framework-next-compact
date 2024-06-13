@@ -1,4 +1,4 @@
-import { title } from "@/components/primitives";
+import { title } from "@/config/variants/primitives";
 
 export default function BlogPage() {
   return (
