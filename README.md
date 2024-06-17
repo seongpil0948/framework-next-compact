@@ -3,6 +3,7 @@
 - Add Font & Localize
 - [ ] Add SEO(site map, robots.txt, meta tag, naver, google, ...etc)
 - [ ] Add i18n
+- [ ] Font to localization
 
 ### Feature
 - [ ] Add Type Generator for OpenAPI
