@@ -3,6 +3,10 @@
 - [ ] Add SEO(site map, robots.txt, meta tag, naver, google, ...etc)
 - [ ] Add i18n
 
+### Feature
+- [ ] Add Type Generator for OpenAPI
+- [ ] Add [zustand](https://docs.pmnd.rs/zustand/getting-started/introduction), [immer](https://github.com/immerjs/immer) for state, object management
+
 ### Design
 - [ ] Add Storybook
   - [ ] Add Common Component
