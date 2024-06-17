@@ -16,14 +16,15 @@
     "jsx-a11y"
   ],
   "extends": [
-    "next",
+    "plugin:storybook/recommended",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:eslint-comments/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
+    "next",
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -227,6 +228,16 @@
             "distinctGroup": false
           }
         ]
+      }
+    },
+    {
+      // or whatever matches stories specified in .storybook/main.js
+      "files": [
+        "*.stories.@(ts|tsx|js|jsx|mjs|cjs)"
+      ],
+      "rules": {
+        "storybook/hierarchy-separator": "error",
+        "storybook/default-exports": "warn"
       }
     }
   ]
