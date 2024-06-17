@@ -1,5 +1,6 @@
 ## Features
 ### Accessibility
+- Add Font & Localize
 - [ ] Add SEO(site map, robots.txt, meta tag, naver, google, ...etc)
 - [ ] Add i18n
 

@@ -1,8 +1,9 @@
-import * as React from "react";
+import * as React from 'react'
 
-import type { IconSvgProps } from "@/types";
-
-export const Logo: React.FC<IconSvgProps> = ({
+type TIconSvgProps = React.SVGProps<SVGSVGElement> & {
+  size?: number
+}
+export const Logo: React.FC<TIconSvgProps> = ({
   size = 36,
   width,
   height,
@@ -22,9 +23,9 @@ export const Logo: React.FC<IconSvgProps> = ({
       fillRule="evenodd"
     />
   </svg>
-);
+)
 
-export const DiscordIcon: React.FC<IconSvgProps> = ({
+export const DiscordIcon: React.FC<TIconSvgProps> = ({
   size = 24,
   width,
   height,
@@ -42,10 +43,10 @@ export const DiscordIcon: React.FC<IconSvgProps> = ({
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
-export const TwitterIcon: React.FC<IconSvgProps> = ({
+export const TwitterIcon: React.FC<TIconSvgProps> = ({
   size = 24,
   width,
   height,
@@ -63,10 +64,10 @@ export const TwitterIcon: React.FC<IconSvgProps> = ({
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
-export const GithubIcon: React.FC<IconSvgProps> = ({
+export const GithubIcon: React.FC<TIconSvgProps> = ({
   size = 24,
   width,
   height,
@@ -86,15 +87,15 @@ export const GithubIcon: React.FC<IconSvgProps> = ({
         fillRule="evenodd"
       />
     </svg>
-  );
-};
+  )
+}
 
 export const MoonFilledIcon = ({
   size = 24,
   width,
   height,
   ...props
-}: IconSvgProps) => (
+}: TIconSvgProps) => (
   <svg
     aria-hidden="true"
     focusable="false"
@@ -109,14 +110,14 @@ export const MoonFilledIcon = ({
       fill="currentColor"
     />
   </svg>
-);
+)
 
 export const SunFilledIcon = ({
   size = 24,
   width,
   height,
   ...props
-}: IconSvgProps) => (
+}: TIconSvgProps) => (
   <svg
     aria-hidden="true"
     focusable="false"
@@ -131,14 +132,14 @@ export const SunFilledIcon = ({
       <path d="M12 22.96a.969.969 0 01-1-.96v-.08a1 1 0 012 0 1.038 1.038 0 01-1 1.04zm7.14-2.82a1.024 1.024 0 01-.71-.29l-.13-.13a1 1 0 011.41-1.41l.13.13a1 1 0 010 1.41.984.984 0 01-.7.29zm-14.28 0a1.024 1.024 0 01-.71-.29 1 1 0 010-1.41l.13-.13a1 1 0 011.41 1.41l-.13.13a1 1 0 01-.7.29zM22 13h-.08a1 1 0 010-2 1.038 1.038 0 011.04 1 .969.969 0 01-.96 1zM2.08 13H2a1 1 0 010-2 1.038 1.038 0 011.04 1 .969.969 0 01-.96 1zm16.93-7.01a1.024 1.024 0 01-.71-.29 1 1 0 010-1.41l.13-.13a1 1 0 011.41 1.41l-.13.13a.984.984 0 01-.7.29zm-14.02 0a1.024 1.024 0 01-.71-.29l-.13-.14a1 1 0 011.41-1.41l.13.13a1 1 0 010 1.41.97.97 0 01-.7.3zM12 3.04a.969.969 0 01-1-.96V2a1 1 0 012 0 1.038 1.038 0 01-1 1.04z" />
     </g>
   </svg>
-);
+)
 
 export const HeartFilledIcon = ({
   size = 24,
   width,
   height,
   ...props
-}: IconSvgProps) => (
+}: TIconSvgProps) => (
   <svg
     aria-hidden="true"
     focusable="false"
@@ -156,9 +157,9 @@ export const HeartFilledIcon = ({
       strokeWidth={1.5}
     />
   </svg>
-);
+)
 
-export const SearchIcon = (props: IconSvgProps) => (
+export const SearchIcon = (props: TIconSvgProps) => (
   <svg
     aria-hidden="true"
     fill="none"
@@ -184,10 +185,10 @@ export const SearchIcon = (props: IconSvgProps) => (
       strokeWidth="2"
     />
   </svg>
-);
+)
 
-export const NextUILogo: React.FC<IconSvgProps> = (props) => {
-  const { width, height = 40 } = props;
+export const NextUILogo: React.FC<TIconSvgProps> = (props) => {
+  const { width, height = 40 } = props
 
   return (
     <svg
@@ -211,5 +212,148 @@ export const NextUILogo: React.FC<IconSvgProps> = (props) => {
         d="M17.5667 9.21729H18.8111V18.2403C18.8255 19.1128 18.6 19.9726 18.159 20.7256C17.7241 21.4555 17.0968 22.0518 16.3458 22.4491C15.5717 22.8683 14.6722 23.0779 13.6473 23.0779C12.627 23.0779 11.7286 22.8672 10.9521 22.4457C10.2007 22.0478 9.5727 21.4518 9.13602 20.7223C8.6948 19.9705 8.4692 19.1118 8.48396 18.2403V9.21729H9.72854V18.1538C9.71656 18.8298 9.88417 19.4968 10.2143 20.0868C10.5362 20.6506 11.0099 21.1129 11.5814 21.421C12.1689 21.7448 12.8576 21.9067 13.6475 21.9067C14.4374 21.9067 15.1272 21.7448 15.7169 21.421C16.2895 21.1142 16.7635 20.6516 17.0844 20.0868C17.4124 19.4961 17.5788 18.8293 17.5667 18.1538V9.21729ZM23.6753 9.21729V22.845H22.4309V9.21729H23.6753Z"
       />
     </svg>
-  );
-};
+  )
+}
+
+export const MailIcon: React.FC<TIconSvgProps> = (props) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    {...props}
+  >
+    <path
+      d="M17 3.5H7C4 3.5 2 5 2 8.5V15.5C2 19 4 20.5 7 20.5H17C20 20.5 22 19 22 15.5V8.5C22 5 20 3.5 17 3.5ZM17.47 9.59L14.34 12.09C13.68 12.62 12.84 12.88 12 12.88C11.16 12.88 10.31 12.62 9.66 12.09L6.53 9.59C6.21 9.33 6.16 8.85 6.41 8.53C6.67 8.21 7.14 8.15 7.46 8.41L10.59 10.91C11.35 11.52 12.64 11.52 13.4 10.91L16.53 8.41C16.85 8.15 17.33 8.2 17.58 8.53C17.84 8.85 17.79 9.33 17.47 9.59Z"
+      fill="currentColor"
+    />
+  </svg>
+)
+export const LockIcon: React.FC<TIconSvgProps> = (props) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    {...props}
+  >
+    <path
+      d="M12.0011 17.3498C12.9013 17.3498 13.6311 16.6201 13.6311 15.7198C13.6311 14.8196 12.9013 14.0898 12.0011 14.0898C11.1009 14.0898 10.3711 14.8196 10.3711 15.7198C10.3711 16.6201 11.1009 17.3498 12.0011 17.3498Z"
+      fill="currentColor"
+    />
+    <path
+      d="M18.28 9.53V8.28C18.28 5.58 17.63 2 12 2C6.37 2 5.72 5.58 5.72 8.28V9.53C2.92 9.88 2 11.3 2 14.79V16.65C2 20.75 3.25 22 7.35 22H16.65C20.75 22 22 20.75 22 16.65V14.79C22 11.3 21.08 9.88 18.28 9.53ZM12 18.74C10.33 18.74 8.98 17.38 8.98 15.72C8.98 14.05 10.34 12.7 12 12.7C13.66 12.7 15.02 14.06 15.02 15.72C15.02 17.39 13.67 18.74 12 18.74ZM7.35 9.44C7.27 9.44 7.2 9.44 7.12 9.44V8.28C7.12 5.35 7.95 3.4 12 3.4C16.05 3.4 16.88 5.35 16.88 8.28V9.45C16.8 9.45 16.73 9.45 16.65 9.45H7.35V9.44Z"
+      fill="currentColor"
+    />
+  </svg>
+)
+
+export const GalleryIcon: React.FC<TIconSvgProps> = (props) => (
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    height="24"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="24"
+    fill="none"
+    {...props}
+  >
+    <path
+      d="M2.58078 19.0112L2.56078 19.0312C2.29078 18.4413 2.12078 17.7713 2.05078 17.0312C2.12078 17.7613 2.31078 18.4212 2.58078 19.0112Z"
+      fill="currentColor"
+    />
+    <path
+      d="M9.00109 10.3811C10.3155 10.3811 11.3811 9.31553 11.3811 8.00109C11.3811 6.68666 10.3155 5.62109 9.00109 5.62109C7.68666 5.62109 6.62109 6.68666 6.62109 8.00109C6.62109 9.31553 7.68666 10.3811 9.00109 10.3811Z"
+      fill="currentColor"
+    />
+    <path
+      d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.19C2 17.28 2.19 18.23 2.56 19.03C3.42 20.93 5.26 22 7.81 22H16.19C19.83 22 22 19.83 22 16.19V13.9V7.81C22 4.17 19.83 2 16.19 2ZM20.37 12.5C19.59 11.83 18.33 11.83 17.55 12.5L13.39 16.07C12.61 16.74 11.35 16.74 10.57 16.07L10.23 15.79C9.52 15.17 8.39 15.11 7.59 15.65L3.85 18.16C3.63 17.6 3.5 16.95 3.5 16.19V7.81C3.5 4.99 4.99 3.5 7.81 3.5H16.19C19.01 3.5 20.5 4.99 20.5 7.81V12.61L20.37 12.5Z"
+      fill="currentColor"
+    />
+  </svg>
+)
+
+export const VideoIcon: React.FC<TIconSvgProps> = (props) => (
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    height="24"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="24"
+    fill="none"
+    {...props}
+  >
+    <path d="M14.7295 2H9.26953V6.36H14.7295V2Z" fill="currentColor" />
+    <path
+      d="M16.2305 2V6.36H21.8705C21.3605 3.61 19.3305 2.01 16.2305 2Z"
+      fill="currentColor"
+    />
+    <path
+      d="M2 7.85938V16.1894C2 19.8294 4.17 21.9994 7.81 21.9994H16.19C19.83 21.9994 22 19.8294 22 16.1894V7.85938H2ZM14.44 16.1794L12.36 17.3794C11.92 17.6294 11.49 17.7594 11.09 17.7594C10.79 17.7594 10.52 17.6894 10.27 17.5494C9.69 17.2194 9.37 16.5394 9.37 15.6594V13.2594C9.37 12.3794 9.69 11.6994 10.27 11.3694C10.85 11.0294 11.59 11.0894 12.36 11.5394L14.44 12.7394C15.21 13.1794 15.63 13.7994 15.63 14.4694C15.63 15.1394 15.2 15.7294 14.44 16.1794Z"
+      fill="currentColor"
+    />
+    <path
+      d="M7.76891 2C4.66891 2.01 2.63891 3.61 2.12891 6.36H7.76891V2Z"
+      fill="currentColor"
+    />
+  </svg>
+)
+export const CameraIcon = ({
+  fill = 'currentColor',
+  filled,
+  size,
+  height,
+  width,
+  label,
+  ...props
+}: any) => {
+  return (
+    <svg
+      // width={size || width || '1rem'}
+      // height={size || height || '1rem'}
+      // viewBox="0 0 24 24"
+      // fill="none"
+      // xmlns="http://www.w3.org/2000/svg"
+      // {...props}
+      aria-hidden="true"
+      fill="none"
+      focusable="false"
+      height="1em"
+      role="presentation"
+      viewBox="0 0 24 24"
+      width="1em"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M17.44 6.236c.04.07.11.12.2.12 2.4 0 4.36 1.958 4.36 4.355v5.934A4.368 4.368 0 0117.64 21H6.36A4.361 4.361 0 012 16.645V10.71a4.361 4.361 0 014.36-4.355c.08 0 .16-.04.19-.12l.06-.12.106-.222a97.79 97.79 0 01.714-1.486C7.89 3.51 8.67 3.01 9.64 3h4.71c.97.01 1.76.51 2.22 1.408.157.315.397.822.629 1.31l.141.299.1.22zm-.73 3.836c0 .5.4.9.9.9s.91-.4.91-.9-.41-.909-.91-.909-.9.41-.9.91zm-6.44 1.548c.47-.47 1.08-.719 1.73-.719.65 0 1.26.25 1.72.71.46.459.71 1.068.71 1.717A2.438 2.438 0 0112 15.756c-.65 0-1.26-.25-1.72-.71a2.408 2.408 0 01-.71-1.717v-.01c-.01-.63.24-1.24.7-1.699zm4.5 4.485a3.91 3.91 0 01-2.77 1.15 3.921 3.921 0 01-3.93-3.926 3.865 3.865 0 011.14-2.767A3.921 3.921 0 0112 9.402c1.05 0 2.04.41 2.78 1.15.74.749 1.15 1.738 1.15 2.777a3.958 3.958 0 01-1.16 2.776z"
+        fill={fill}
+      />
+    </svg>
+  )
+}
+
+export const CloseFilledIcon: React.FC<TIconSvgProps> = (props) => (
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    {...props}
+  >
+    <path
+      d="M12 2a10 10 0 1010 10A10.016 10.016 0 0012 2zm3.36 12.3a.754.754 0 010 1.06.748.748 0 01-1.06 0l-2.3-2.3-2.3 2.3a.748.748 0 01-1.06 0 .754.754 0 010-1.06l2.3-2.3-2.3-2.3A.75.75 0 019.7 8.64l2.3 2.3 2.3-2.3a.75.75 0 011.06 1.06l-2.3 2.3z"
+      fill="currentColor"
+    />
+  </svg>
+)
